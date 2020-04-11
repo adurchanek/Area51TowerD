@@ -5,11 +5,8 @@ using UnityEngine;
 public class FighterJet : MonoBehaviour
 {
     public Transform[] locations;
-
     public float speed;
     public float MAX_SPEED;
-    
-
     public bool airStrikeActive;
     // Start is called before the first frame update
     void Start()
@@ -35,21 +32,10 @@ public class FighterJet : MonoBehaviour
         transform.LookAt(dir);
 
         if (Vector3.Distance(transform.position, locations[1].position) < 2f)
-
         {
-
             airStrikeActive = false;
-
             transform.position = locations[0].position;
             this.gameObject.SetActive(false);
-
-            //Debug.Log("TESTING");
-
-
         }
-        
     }
-
-
-
 }

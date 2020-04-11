@@ -16,11 +16,9 @@ public class ChargedAttacks : MonoBehaviour
     {
         
     }
-
-
+    
     public void CallAirStrike()
     {
-
         Debug.Log("airstrike called");
         fighter.gameObject.SetActive(true);
     }

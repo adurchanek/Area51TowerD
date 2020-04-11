@@ -32,17 +32,8 @@ namespace DefaultNamespace
 	//change the shop update to update a current cost to reflect the upgraded turrets cost
 	//TODO change the green squares to only when something is built, not when its moused over.
 	
-	
-	
-	
 	/*
-	 
-	 
-	 
-	 
-	 
-	 
-	 
+
 	 //TODO GAME IDEAS----------------------
 	 //create an AOE that when applied to enemies, the next attacks are strong but the are faster or something
 	 //another aoe which pulls them to the center making it more effecient for other aoes. stuns/and or slows them at first
@@ -53,13 +44,7 @@ namespace DefaultNamespace
 	 //ability tree
 	 //some sort of visual effect for the explosion. explore the particle pack? circle maybe
 	 
-	 
-	 
-	 
 	 */
-	
-	
-	
 	
 }
 

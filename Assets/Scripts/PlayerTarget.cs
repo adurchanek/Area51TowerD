@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerTarget : MonoBehaviour
 {
-    
-    
-    public  RaycastHit currentHit;
+    public RaycastHit currentHit;
     public EnemyMovement targetEnemy;
     public GameObject cornerObject;
     
@@ -14,13 +12,11 @@ public class PlayerTarget : MonoBehaviour
     void Start()
     {
         
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         currentHit = InputManager.currentHit;
-        //Debug.Log("test");
     }
 }

@@ -4,88 +4,53 @@ using UnityEngine;
 
 public class Ufo : MonoBehaviour
 {
-    
-    
-    
     private Transform target;
-    //private int wavepointIndex = 0;
-
     public WaveSpawner waveSpawner;
-
- 
-
     private bool headingToWaypoint;
     public Transform[] desertWaypoints;
-
     private int waveIndex;
-
     private float speed;
     private float MAX_SPEED = 1;
-
     private int currentNumSpawned;
     private int maxNumSpawnBeforeReset;
 
     void Start()
-
     {
-
-        //enemy = GetComponent<EnemyMovement>();
         headingToWaypoint = true;
-
         waveIndex = 0;
         target = Waypoints.waypoints[waveIndex];
         speed = MAX_SPEED;
         currentNumSpawned = 0;
         maxNumSpawnBeforeReset = 3;
     }
-
-	
+    
     void Update()
-
     {
-        
         if (!WaveSpawner.tutorialComplete)
         {
-			
-			
-			
-
             return;
         }
-
-
+        
         if (WaveSpawner.enemiesAlive <= 0)
         {
             speed = .25f;
-            //return;
         }
         else
         {
             speed = MAX_SPEED;
         }
-        Vector3 dir = target.position - transform.position;
         
+        Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized*speed*Time.deltaTime,Space.World);
 
         if (Vector3.Distance(transform.position, target.position) < .15f)
-
         {
-
-
             GetNextWayPoint();
-            Debug.Log("TESTINGgggufc waypoint"+ currentNumSpawned);
-            //Debug.Log("CURRENT NUM SPAWNED: ");
-
-
         }
-
- 
     }
 
     private void GetNextWayPoint()
     {
-        
-
         if (headingToWaypoint)
         {
             //int randomSpawnCount = Random.Range(1,  4);
@@ -95,28 +60,15 @@ public class Ufo : MonoBehaviour
                 waveSpawner.SpawnEnemy(target.transform, waveIndex);
                 i++;
             }
-
-
-
-
+            
             if (currentNumSpawned >= maxNumSpawnBeforeReset)
             {
                 int r = Random.Range(0,  desertWaypoints.Length);
                 target = desertWaypoints[r];
-                Debug.Log("CURRENT NUM SPAWNED: "+ currentNumSpawned);
                 currentNumSpawned = 0;
-
-
             }
-
             currentNumSpawned++;
-
-
-            
-            
             headingToWaypoint = false;
-
-
         }
         else
         {
@@ -124,9 +76,6 @@ public class Ufo : MonoBehaviour
             int r = Random.Range(0,  Waypoints.waypoints.Length-11);
             target = Waypoints.waypoints[r];
             waveIndex = r;
-            //
-
         }
-
     }
 }

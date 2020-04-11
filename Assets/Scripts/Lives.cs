@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class Lives : MonoBehaviour
 {
-
-
-
 	public Text livesText;
 
 	// Use this for initialization
@@ -18,13 +15,7 @@ public class Lives : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-
-
 		livesText.text = PlayerStats.Lives.ToString() + " Lives";
 		//TODO do coroutine
-
 	}
-	
-	
-	
 }

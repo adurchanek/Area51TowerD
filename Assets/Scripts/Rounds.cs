@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Rounds : MonoBehaviour
 {
-    
-    
     public Text roundsText;
     // Start is called before the first frame update
     void Start()
@@ -25,8 +23,4 @@ public class Rounds : MonoBehaviour
         int r = PlayerStats.rounds + 1;
         roundsText.text = "ROUND " + r.ToString();
     }
-    
-    
-    
-    
 }

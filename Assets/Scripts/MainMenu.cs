@@ -25,24 +25,13 @@ public class MainMenu : MonoBehaviour
 	public void Quit()
 
 	{
-
-		
-		
 		Debug.Log("Quit");
 		Application.Quit();
-
-		//SceneFader.FadeTo(levelToLoad);
 	}
 	
 	public void Play()
-
 	{
-		
-		
-		
 		Debug.Log("Play");
-		
-		//SceneManager.LoadScene(levelToLoad);
 		SceneManager.LoadScene("SampleScene");
 	}
 }

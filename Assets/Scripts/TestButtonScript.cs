@@ -18,5 +18,4 @@ public class TestButtonScript : MonoBehaviour
     {
         button.transform.GetChild(0).GetComponent<Image>().color = Color.red;
     }
-    
 }
